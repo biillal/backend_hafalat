@@ -66,9 +66,13 @@ export class UserController {
   @Roles(['admin'])
   @UseGuards(AuthGuard)
   @Delete(':id')
-  remove(@Param('id') id: string): Promise<void>  {
+  remove(@Param('id') id: string): Promise<void> {
     return this.userService.remove(id);
   }
 
+  
+
 
 }
+
+

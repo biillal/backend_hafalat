@@ -46,7 +46,6 @@ export class UserService {
       email,
       role
     } = query
-    console.log(_limit, skip);
 
     if (Number.isNaN(Number(+_limit))) {
       throw new HttpException('Invalid limit', 400)

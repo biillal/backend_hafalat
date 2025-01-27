@@ -4,6 +4,8 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { JwtModule } from '@nestjs/jwt';
+import { SallesModule } from './salles/salles.module';
+import { CloudinaryModule } from './cloudinary/cloudinary.module';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
@@ -19,7 +21,9 @@ dotenv.config();
       signOptions: { expiresIn: '1h' }, // مدة صلاحية الـ JWT
     }),
     UserModule,
-    AuthModule
+    AuthModule,
+    SallesModule,
+    CloudinaryModule
   ],
 
 })
